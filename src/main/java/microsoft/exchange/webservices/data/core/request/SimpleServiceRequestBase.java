@@ -68,7 +68,7 @@ public abstract class SimpleServiceRequestBase<T> extends ServiceRequestBase<T> 
     } catch (Exception e) {
       if (response != null) {
         this.getService().processHttpResponseHeaders(TraceFlags.
-            EwsResponseHttpHeaders, response);
+                EwsResponseHttpHeaders, response);
       }
 
       throw new ServiceRequestException(String.format("The request failed. %s", e.getMessage()), e);
